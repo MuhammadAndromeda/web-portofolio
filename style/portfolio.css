@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box; /* Tambahan untuk memastikan padding dan margin terhitung dalam width dan height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 8%;
+    background-color: rgba(25, 25, 25, 0.8);
+    border-bottom: 1px solid orange;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+    cursor: pointer;
+}
+
+span {
+    color: orange;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 15px;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: orange;
+    font-size: 20px;
+    transition: all 0.1s ease-in;
+}
+
+.btn {
+    background-color: orange;
+    color: #171717;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    border: 2px solid orange;
+    color: white;
+    background-color: transparent;
+}
+
+.image {
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    transform: rotateY(180deg);
+}
+
+.image img {
+    height: auto;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+    transform: translateX(20%);
+    backdrop-filter: none;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+.content h4 {
+    padding-top: 100px;
+    font-family: 'Arial', sans-serif;
+    color: #fcfcfc;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+}
+
+.content h1 {
+    width: 600px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-size: 3.75rem;
+    margin: 20px 0;
+}
+
+.content h3 {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 50px;
+}
+
+.content a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: orange;
+    color: #171717;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+@media (max-width: 1024px) {
+    .image {
+        width: 60%;
+        right: 20px;
+    }
+    
+    .image img {
+        width: 80%;
+        right: 10%;
+    }
+    
+    h1 {
+        width: 100%;
+        font-size: 50px;
+    }
+    
+    h3 {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .content a {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 10px;
+    }
+    
+    .logo {
+        font-size: 30px;
+    }
+    
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .image {
+        width: 80%;
+        right: 10px;
+    }
+    
+    .image img {
+        width: 90%;
+        right: 5%;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+    
+    .content {
+        top: 55%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        margin: 10px 0;
+    }
+    
+    .image {
+        width: 90%;
+        right: 5px;
+    }
+    
+    .image img {
+        width: 100%;
+        right: 0;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 14px;
+    }
+    
+    .content {
+        left: 5%;
+    }
+    
+    .content a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+.content a:hover {
+    color: white;
+    background: transparent;
+    border: 3px solid orange;
+}
+
+.about {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #191919;
+}
+
+.about-me {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Tambahan untuk memastikan konten beradaptasi dengan baik pada layar kecil */
+}
+
+.about-me img {
+    box-shadow: 4px 4px 10px 7px #4b4b4b;
+    height: auto;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-bottom: 2px solid orange;
+}
+
+.about-text h5 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    color: white;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 1rem;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.button {
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.button:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+.project {
+    width: 100%;
+    padding: 100px 0;
+    background: #101010;
+}
+
+.card {
+    height: auto;
+    width: auto;
+    padding: 30px 35px;
+    background: #141414;
+    border-radius: 20px;
+    margin: 10px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid orange;
+}
+
+.card i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: orange;
+}
+
+.card h5 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card .pra p {
+    color: grey;
+    width: 250px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.pra a {
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 9px 25px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.pra a:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+.title h2 {
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Tambahan untuk memastikan konten beradaptasi dengan baik pada layar kecil */
+    min-height: 400px;
+}
+
+.card-bar {
+    height: auto;
+    width: 22rem;
+    padding: 30px 35px;
+    background: #141414;
+    border-radius: 20px;
+    margin: 10px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid orange;
+}
+
+.card-bar i {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    color: orange;
+}
+
+.card-bar h5 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card .pra p {
+    color: grey;
+    width: 250px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.pra a {
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 9px 25px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.pra a:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+.skill {
+    width: 100%;
+    padding: 100px 0;
+    background: #191919;
+}
+
+.skill-bar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.skill-bar p {
+    text-align: left;
+}
+
+.skill-box {
+    border-radius: 3px;
+    text-align: right;
+    width: 100%;
+    background-color: white;
+}
+
+.html {
+    width: 90%; 
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.css {
+    width: 80%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.javascript {
+    width: 10%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.react {
+    width: 10%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.php {
+    width: 10%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.python {
+    width: 50%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.mysql {
+    width: 10%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.firebase {
+    width: 10%; 
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.figma {
+    width: 90%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.dribbble {
+    width: 70%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.photopea {
+    width: 50%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.adobe {
+    width: 30%;
+    border-radius: 3px;
+    background-color: orange;
+    padding-right: 5px;
+}
+
+.contact-me {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-text h2 {
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.contact-box::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.contact {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.contact h4 {
+    color: orange;
+    padding-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .contact-text h2 {
+        font-size: 50px;
+    }
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact {
+        padding: 30px 20px;
+    }
+    .contact p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-text h2 {
+        font-size: 40px;
+    }
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact {
+        padding: 20px 10px;
+    }
+    .contact p {
+        font-size: 14px;
+    }
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto; /* Mengubah height agar otomatis menyesuaikan konten */
+    padding: 70px 0; /* Menambahkan padding untuk jarak atas dan bawah */
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center; /* Menambahkan text-align agar teks berada di tengah */
+}
+
+footer p:nth-child(2) {
+    color: #fcfcfc;
+    font-size: 17px;
+    max-width: 500px; /* Mengubah width ke max-width */
+    width: 90%; /* Agar lebih fleksibel pada layar kecil */
+    text-align: center;
+    line-height: 26px;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: wrap; /* Membuat elemen sosial media bisa wrap */
+    justify-content: center; /* Agar tetap berada di tengah */
+}
+
+.social-media a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: orange;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    border: 2px solid white;
+}
+
+.copyright {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; /* Mengubah height agar otomatis menyesuaikan konten */
+    padding: 15px 0; /* Menambahkan padding untuk jarak atas dan bawah */
+    background: #101010;
+}
+
+.copyright p:nth-child(1) {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 19px;
+}
+
+@media (max-width: 768px) {
+    footer p:nth-child(1) {
+        font-size: 24px; 
+    }
+
+    footer p:nth-child(2) {
+        font-size: 15px; 
+    }
+
+    .social-media a {
+        margin: 10px 5px; 
+    }
+
+    .copyright p:nth-child(1) {
+        font-size: 16px; 
+    }
+}

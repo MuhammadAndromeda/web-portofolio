@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background-color: #101010;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 8%;
+    padding-left: 8%;
+    background-color: #191919 (25, 25, 25, 0.8);
+    border-bottom: 1px solid orange;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    color: white;
+    font-size: 40px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span {
+    color: orange;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: white;
+    font-family: 'roboto';
+    font-weight: bolder;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    width: 100px;
+    color: orange;
+    border-bottom: 2px solid orange;
+    transition: all 0.1s ease-in;
+}
+
+.btn {
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 25px;
+    border-radius: 30px;
+    transition: transform .5s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    border: 0.2rem solid orange;
+    background-color: transparent;
+}
+
+.text-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-header h1 {
+    color: white;
+    font-size: 90px;
+    width: 100;
+}
+
+.text-header h3 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    width: 100;
+    margin-top: 10px;
+}
+
+.about {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #191919;
+}
+
+.about-me {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-me img {
+    box-shadow: 4px 4px 10px 7px #4b4b4b;
+    height: auto;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-bottom: 2px solid orange;
+}
+
+.about-text h5 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-text p {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.button {
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.button:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+.school {
+    width: 100%;
+    padding: 100px 0;
+    background-color: #101010;
+}
+
+.about-school {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-school img {
+    box-shadow: 4px 4px 10px 7px #4b4b4b;
+    height: auto;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.about-sch-text {
+    width: 550px;
+}
+
+.about-sch-text h2 {
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    border-bottom: 2px solid orange;
+}
+
+.about-sch-text h5 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.about-sch-text p {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+.button {
+    background-color: orange;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.button:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    background-color: transparent;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1) {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2) {
+    color: #fcfcfc;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: orange;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    border: 2px solid white;
+}
+
+.copyright {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background: #101010;
+}
+
+.copyright p:nth-child(1) {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 19px;
+}
+
+hr {
+    border: 1px solid orange;
+}
